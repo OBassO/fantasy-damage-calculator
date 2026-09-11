@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <title>傷害計算器-AuraKindom</title>
+
+    <style>
+
+        .calculator {
+            display: grid;
+            grid-template-columns: 300px 500px;
+            gap: 20px;
+        }
+
+        .dungeon-section {
+            border-right: 5px solid #ccc;
+            padding-right: 30px;
+        }
+
+        .character-section {
+            padding-left: 5px;
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <h1>傷害計算器(20260911)</h1>
+
+    <div class="calculator">
+
+        <div class="dungeon-section">
+
+            <label for="dungeon">副本選擇：</label><br>
+
+            <select id="dungeon" onchange="updateDungeonDebuff()">
+               <option value="">請選擇副本</option>
+               <option value="dungeon1">命運塔II(1F-3F)</option>
+               <option value="dungeon111">命運塔II(4F-7F)</option>
+               <option value="dungeon2">命運塔I(12F)</option>
+               <option value="dungeon3">夢魘．實驗地牢</option>
+               <option value="dungeon4">始原(煉獄)</option>
+               <option value="dungeon5">巨岩(煉獄)</option>
+               <option value="dungeon6">冰瀑龍王(煉獄)</option>
+               <option value="dungeon7">雷冥女爵(煉獄)</option>
+               <option value="dungeon8">暴風(煉獄)</option>
+               <option value="dungeon9">熔岩(煉獄)</option>
+               <option value="dungeon10">風龍(煉獄)</option>
+               <option value="dungeon11">水龍(煉獄)</option>
+               <option value="dungeon12">雷龍(煉獄)</option>
+               <option value="dungeon13">書庫7F(5人)(冰)</option>
+               <option value="dungeon14">書庫6F(5人)(暗)</option>
+               <option value="dungeon15">書庫5F(5人)(暗)</option>
+               <option value="dungeon16">書庫4F(5人)(風)</option>
+               <option value="dungeon17">書庫3F(5人)(雷)</option>
+               <option value="dungeon18">書庫2F(5人)(光)</option>
+               <option value="dungeon19">書庫1F(5人)(暗)</option>
+               <option value="dungeon20">S10(5人)</option>
+               <option value="dungeon21">S5(5人)</option>
+               <option value="dungeon22">S1(5人)古堡、棧道</option>
+               <option value="dungeon23">S1(5人)聖殿</option>
+               <option value="dungeon24">覺醒幻境</option>
+               <option value="dungeon25">夢魘訓練場</option>
+            </select>
+    <br><br>
+    （僅列出部分Debuff數值）
+    <br><br>
+    
+            <div id="dungeonDebuff">
+                <div>造傷壓制：<span id="damageLimit"></span>%</div>
+                <div>屬傷壓制：<span id="attributeDamageLimit"></span>%</div>
+                <div>對屬壓制：<span id="toAttributeLimit"></span>%</div>
+                <div>屬性抗性：<span id="attributeResistance"></span>%</div>
+                <div>爆擊抗性：<span id="criticalResistance"></span>%</div>
+                <div>減傷(受造可影響)：<span id="finalDamageReduction"></span>%</div>
+                <div>固定減傷：<span id="specialDamageReduction"></span>%</div>   
+            </div>
+    <br><br>
+
+    <button onclick="calculateDamage()">計算</button>
+
+    <h2>
+        結果：
+        <span id="result"></span>
+    </h2>
+
+    <script src="calculator.js"></script>
+
+
+        </div>
+    
+
+    <div class="character-section">
+
+        <label>
+            <input type="checkbox" id="weaponAttribute">武器對屬<br><br>
+        </label>
+
+        <label>
+            <input type="checkbox" id="enemyAttribute">技能同敵人屬性<br><br>
+        </label>
+
+        <label>
+            傷害值<br>
+            <input type="number" id="power" step="1" min="0" onchange="getskillRate()">
+            <br>
+            技能等級(100-150)<br>
+            <input type="number" id="skillLevel" step="1" min="100" max="150" onchange="getskillRate()">
+            <br>
+            技能面板傷害(拔除秘石、扣除任何裝備或道具係數加成效果的白字)<br>
+            <input type="number" id="skillDamage" step="1" min="0" onchange="getskillRate()">
+            <br>
+            初始技能係數(系統自動計算)<br>
+            <input type="number" id="skillRate" step="any" readonly>
+            <br>
+            額外技能係數(%)(技能傷害提升XX%,EX:注魂)<br>
+            <input type="number" id="bonusSkillrate" step="1" min="0">
+            <br>
+            職業傷害(%)(詳細列表→攻擊表現→武器表現)<br>
+            <input type="number" id="classDamage" step="1" min="0">
+            <br>
+            XX屬性傷害(%)<br>
+            <input type="number" id="attributeDamage" step="1" min="0">
+            <br>
+            主武器傷害(%)<br>
+            <input type="number" id="mainWeaponDamage" step="1" min="0">
+            <br>
+            對屬性傷害(%)<br>
+            <input type="number" id="toAttributeDamage" step="1" min="0">
+            <br>
+            實際穿透(%)(敵人面板上顯示,-60至+80)<br>
+            <input type="number" id="penetration" step="any" min="-60" max="80" onchange="getPenetration()">
+            <br>
+            所有目標造傷(%)<br>
+            <input type="number" id="damageBonus" step="1" min="0">
+            <br>
+            頭目造傷(%)<br>
+            <input type="number" id="bossDamageBonus" step="1" min="0">
+            <br>
+            所有目標爆擊傷害(%)<br>
+            <input type="number" id="criticalDamage" step="1" min="0">
+            <br>
+            頭目爆擊傷害(%)<br>
+            <input type="number" id="bossCriticalDamage" step="1" min="0">
+            <br>
+            日月星(%)(未覺醒請輸入100)<br>
+            <input type="number" id="TrinityDamage" step="1" min="100">
+            <br>
+        </label>
+    </div>
+    </div>
+
+    <br><br>
+
+
+
+</body>
+
+</html>
