@@ -96,6 +96,19 @@ const dungeonDebuffTable = {
         specialDamageReduction: 65
     },
 
+    //共鬥
+    dungeon222: {
+        damageLimit: 230,
+        attributeDamageLimit: 150,
+        toAttributeLimit: 100,
+        defense: 0,
+        attributeResistance: 150,
+        criticalResistance: 250,
+        TrinityResistance: 10,
+        finalDamageReduction: 80,
+        specialDamageReduction: 50
+    },
+
     //夢魘
     dungeon3: {
         damageLimit: 290,
