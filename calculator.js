@@ -239,6 +239,19 @@ const dungeonDebuffTable = {
         specialDamageReduction: 0
     },
 
+    //書8F
+    dungeon122: {
+        damageLimit: 275,
+        attributeDamageLimit: 180,
+        toAttributeLimit: 140,
+        defense: 0,
+        attributeResistance: 170,
+        criticalResistance: 230,
+        TrinityResistance: 0,
+        finalDamageReduction: 99,
+        specialDamageReduction: 50
+    },
+
     //書7F
     dungeon13: {
         damageLimit: 275,
