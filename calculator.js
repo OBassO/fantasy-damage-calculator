@@ -133,7 +133,7 @@ const dungeonDebuffTable = {
         TrinityResistance: 60,
         finalDamageReduction: 90,
         specialDamageReduction: 60
-
+    },
 
     //始原
     dungeon4: {
