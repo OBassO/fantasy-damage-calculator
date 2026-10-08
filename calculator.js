@@ -534,7 +534,8 @@ function updateDungeonDebuff() {
     document.getElementById("attributeResistance").textContent = debuff.attributeResistance;
     document.getElementById("criticalResistance").textContent = debuff.criticalResistance;
     document.getElementById("finalDamageReduction").textContent = debuff.finalDamageReduction;
-    document.getElementById("specialDamageReduction").textContent = debuff.specialDamageReduction;  
+    document.getElementById("specialDamageReduction").textContent = debuff.specialDamageReduction;
+    document.getElementById("Tenacity").textContent = debuff.Tenacity;
 }
 
 function calculateDamage() {
@@ -605,6 +606,8 @@ function calculateDamage() {
     const finalDamageReduction = debuff.finalDamageReduction;
 
     const specialDamageReduction = debuff.specialDamageReduction;
+
+    const Tenacity = debuff.Tenacity;
 
 
     const realAttributeDamage = Math.min(attributeDamage - attributeDamageLimit,300);
