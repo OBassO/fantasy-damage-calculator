@@ -67,7 +67,8 @@ const dungeonDebuffTable = {
         criticalResistance: 50,
         TrinityResistance: 20,
         finalDamageReduction: 97,
-        specialDamageReduction: 60
+        specialDamageReduction: 60,
+        Tenacity:441800
     },
 
     //塔II 4-7F
@@ -80,7 +81,22 @@ const dungeonDebuffTable = {
         criticalResistance: 50,
         TrinityResistance: 30,
         finalDamageReduction: 97,
-        specialDamageReduction: 60
+        specialDamageReduction: 60,
+        Tenacity:441800
+    },
+
+    //塔II 8-12F
+    dungeon112: {
+        damageLimit: 100,
+        attributeDamageLimit: 120,
+        toAttributeLimit: 70,
+        defense: 0,
+        attributeResistance: 60,
+        criticalResistance: 60,
+        TrinityResistance: 30,
+        finalDamageReduction: 97,
+        specialDamageReduction: 60,
+        Tenacity:489500
     },
 
     //塔I 12F
@@ -93,7 +109,8 @@ const dungeonDebuffTable = {
         criticalResistance: 150,
         TrinityResistance: 0,
         finalDamageReduction: 95,
-        specialDamageReduction: 65
+        specialDamageReduction: 65,
+        Tenacity:312000
     },
 
     //共鬥
@@ -106,10 +123,11 @@ const dungeonDebuffTable = {
         criticalResistance: 250,
         TrinityResistance: 10,
         finalDamageReduction: 80,
-        specialDamageReduction: 50
+        specialDamageReduction: 50,
+        Tenacity:441800
     },
 
-    //夢魘
+    //夢魘8/26
     dungeon3: {
         damageLimit: 290,
         attributeDamageLimit: 250,
@@ -119,10 +137,11 @@ const dungeonDebuffTable = {
         criticalResistance: 300,
         TrinityResistance: 70,
         finalDamageReduction: 90,
-        specialDamageReduction: 60
+        specialDamageReduction: 60,
+        Tenacity:657500
     },
 
-    //夢魘
+    //夢魘9/30
     dungeon33: {
         damageLimit: 190,
         attributeDamageLimit: 200,
@@ -132,7 +151,8 @@ const dungeonDebuffTable = {
         criticalResistance: 200,
         TrinityResistance: 60,
         finalDamageReduction: 90,
-        specialDamageReduction: 60
+        specialDamageReduction: 60,
+        Tenacity:489500
     },
 
     //始原
@@ -145,7 +165,8 @@ const dungeonDebuffTable = {
         criticalResistance: 220,
         TrinityResistance: 25,
         finalDamageReduction: 99,
-        specialDamageReduction: 0
+        specialDamageReduction: 0,
+        Tenacity:489500
     },
     
     //巨岩
@@ -158,7 +179,8 @@ const dungeonDebuffTable = {
         criticalResistance: 200,
         TrinityResistance: 20,
         finalDamageReduction: 99,
-        specialDamageReduction: 0
+        specialDamageReduction: 0,
+        Tenacity:441800
     },
 
     //冰龍
@@ -171,7 +193,8 @@ const dungeonDebuffTable = {
         criticalResistance: 150,
         TrinityResistance: 0,
         finalDamageReduction: 99,
-        specialDamageReduction: 0
+        specialDamageReduction: 0,
+        Tenacity:321800
     },
 
     //雷冥
@@ -184,7 +207,8 @@ const dungeonDebuffTable = {
         criticalResistance: 100,
         TrinityResistance: 0,
         finalDamageReduction: 93,
-        specialDamageReduction: 0
+        specialDamageReduction: 0,
+        Tenacity:204500
     },
 
     //暴風
@@ -197,7 +221,8 @@ const dungeonDebuffTable = {
         criticalResistance: 90,
         TrinityResistance: 0,
         finalDamageReduction: 88,
-        specialDamageReduction: 0
+        specialDamageReduction: 0,
+        Tenacity:183500
     },
 
     //火領
@@ -210,7 +235,8 @@ const dungeonDebuffTable = {
         criticalResistance: 90,
         TrinityResistance: 0,
         finalDamageReduction: 88,
-        specialDamageReduction: 0
+        specialDamageReduction: 0,
+        Tenacity:183500
     },
 
     //風龍
@@ -223,7 +249,8 @@ const dungeonDebuffTable = {
         criticalResistance: 50,
         TrinityResistance: 0,
         finalDamageReduction: 90,
-        specialDamageReduction: 0
+        specialDamageReduction: 0,
+        Tenacity:61000
     },
 
     //水龍
@@ -236,7 +263,8 @@ const dungeonDebuffTable = {
         criticalResistance: 90,
         TrinityResistance: 0,
         finalDamageReduction: 80,
-        specialDamageReduction: 0
+        specialDamageReduction: 0,
+        Tenacity:120500
     },
 
     //雷龍
@@ -249,7 +277,8 @@ const dungeonDebuffTable = {
         criticalResistance: 50,
         TrinityResistance: 0,
         finalDamageReduction: 90,
-        specialDamageReduction: 0
+        specialDamageReduction: 0,
+        Tenacity:0
     },
 
     //書8F
@@ -262,7 +291,8 @@ const dungeonDebuffTable = {
         criticalResistance: 230,
         TrinityResistance: 0,
         finalDamageReduction: 99,
-        specialDamageReduction: 50
+        specialDamageReduction: 50,
+        Tenacity:563000
     },
 
     //書7F
@@ -275,7 +305,8 @@ const dungeonDebuffTable = {
         criticalResistance: 220,
         TrinityResistance: 0,
         finalDamageReduction: 99,
-        specialDamageReduction: 50
+        specialDamageReduction: 50,
+        Tenacity:563000
     },
 
     //書6F
@@ -288,7 +319,8 @@ const dungeonDebuffTable = {
         criticalResistance: 220,
         TrinityResistance: 0,
         finalDamageReduction: 99,
-        specialDamageReduction: 50
+        specialDamageReduction: 50,
+        Tenacity:489500
     },
 
     //書5F
@@ -301,7 +333,8 @@ const dungeonDebuffTable = {
         criticalResistance: 200,
         TrinityResistance: 0,
         finalDamageReduction: 99,
-        specialDamageReduction: 50
+        specialDamageReduction: 50,
+        Tenacity:441800
     },
 
     //書4F
@@ -314,7 +347,8 @@ const dungeonDebuffTable = {
         criticalResistance: 150,
         TrinityResistance: 0,
         finalDamageReduction: 95,
-        specialDamageReduction: 50
+        specialDamageReduction: 50,
+        Tenacity:373000
     },
 
     //書3F
@@ -327,7 +361,8 @@ const dungeonDebuffTable = {
         criticalResistance: 130,
         TrinityResistance: 0,
         finalDamageReduction: 88,
-        specialDamageReduction: 50
+        specialDamageReduction: 50,
+        Tenacity:271000
     },
 
     //書2F
@@ -340,7 +375,8 @@ const dungeonDebuffTable = {
         criticalResistance: 100,
         TrinityResistance: 0,
         finalDamageReduction: 83,
-        specialDamageReduction: 50
+        specialDamageReduction: 50,
+        Tenacity:204500
     },
 
     //書1F
@@ -353,7 +389,8 @@ const dungeonDebuffTable = {
         criticalResistance: 100,
         TrinityResistance: 0,
         finalDamageReduction: 80,
-        specialDamageReduction: 50
+        specialDamageReduction: 50,
+        Tenacity:145000
     },
 
     //S10
@@ -366,7 +403,8 @@ const dungeonDebuffTable = {
         criticalResistance: 130,
         TrinityResistance: 0,
         finalDamageReduction: 95,
-        specialDamageReduction: 10
+        specialDamageReduction: 10,
+        Tenacity:373000
     },
 
     //S5
@@ -379,7 +417,8 @@ const dungeonDebuffTable = {
         criticalResistance: 130,
         TrinityResistance: 0,
         finalDamageReduction: 95,
-        specialDamageReduction: 10
+        specialDamageReduction: 10,
+        Tenacity:312000
     },
 
     //S1
@@ -392,7 +431,8 @@ const dungeonDebuffTable = {
         criticalResistance: 100,
         TrinityResistance: 0,
         finalDamageReduction: 90,
-        specialDamageReduction: 0
+        specialDamageReduction: 0,
+        Tenacity:231000
     },
 
     //S1聖殿
@@ -405,7 +445,8 @@ const dungeonDebuffTable = {
         criticalResistance: 50,
         TrinityResistance: 0,
         finalDamageReduction: 90,
-        specialDamageReduction: 0
+        specialDamageReduction: 0,
+        Tenacity:170000
     },
 
     //覺醒
@@ -418,7 +459,8 @@ const dungeonDebuffTable = {
         criticalResistance: 100,
         TrinityResistance: 0,
         finalDamageReduction: 80,
-        specialDamageReduction: 0
+        specialDamageReduction: 0,
+        Tenacity:120500
     },
 
     //夢魘木頭
@@ -431,7 +473,8 @@ const dungeonDebuffTable = {
         criticalResistance: 240,
         TrinityResistance: 22.5,
         finalDamageReduction: 90,
-        specialDamageReduction: 55
+        specialDamageReduction: 55,
+        Tenacity:489500
     },
 };
 
