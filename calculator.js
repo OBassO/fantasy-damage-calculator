@@ -155,6 +155,20 @@ const dungeonDebuffTable = {
         Tenacity:489500
     },
 
+    //夢魘10/28
+    dungeon333: {
+        damageLimit: 190,
+        attributeDamageLimit: 200,
+        toAttributeLimit: 150,
+        defense: 0,
+        attributeResistance: 100,
+        criticalResistance: 200,
+        TrinityResistance: 60,
+        finalDamageReduction: 90,
+        specialDamageReduction: 60,
+        Tenacity:489500
+    },
+
     //始原
     dungeon4: {
         damageLimit: 270,
@@ -391,6 +405,20 @@ const dungeonDebuffTable = {
         finalDamageReduction: 80,
         specialDamageReduction: 50,
         Tenacity:145000
+    },
+
+    //S15
+    dungeon20: {
+        damageLimit: 200,
+        attributeDamageLimit: 130,
+        toAttributeLimit: 0,
+        defense: 0,
+        attributeResistance: 150,
+        criticalResistance: 130,
+        TrinityResistance: 0,
+        finalDamageReduction: 95,
+        specialDamageReduction: 10,
+        Tenacity:441800
     },
 
     //S10
